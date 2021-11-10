@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0%;
+        }
+        
+        .container {
+            background-image: url(image/background.jpg);
+            height: 100vh;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .road {
+            background-image: url(image/road.jpg);
+            height: 200px;
+            width: 100%;
+            bottom: 0%;
+            position: absolute;
+            bottom: 0%;
+        }
+        
+        .plane {
+            height: 150px;
+            width: 500px;
+            position: absolute;
+            bottom: 200px;
+            right: -120px;
+            animation: plane 4s linear infinite;
+        }
+        
+        @keyframes plane {
+            0% {
+                transform: translateX(0px) translateY(0px) rotate(0deg);
+            }
+            25% {
+                transform: translateX(-500px) translateY(0px) rotate(0deg);
+            }
+            100% {
+                transform: translateX(-1500px) translateY(-200px) rotate(20deg);
+            }
+        }
+        
+        .my {
+            text-align: center;
+            font-size: 50px;
+            color: green;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="road"></div>
+        <div>
+            <img class="plane" src="./image/airplane.png" alt="">
+            <p class="my">my fisrt plane animation</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
